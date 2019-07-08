@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#da532c">
+  <title>Contacts | Fortune towers</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="home.min.css">
+  <link rel="stylesheet" type="text/css" href="common.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://use.fontawesome.com/c2f7320238.js"></script>
+  <link rel="stylesheet" type="text/css" href="aditya.css">
+
+
+  <style>
+      body {
+          margin: 0;
+          width: 100%;
+          
+        }
+  </style>
+        
+</head>
+
+<body> 
+  <nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-hide" href="profile.html"><i class="fa fa-user fa-lg"></i></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+              <li><a href="aditya.html">Home</a></li>
+              <li><a href="contacts.html">contacts</a></li>
+              <li><a href="events.html">events</a></li>
+              <li><a href="gallery.html">gallery</a></li>
+              <li><a href="association.html">Association</a></li>
+               
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-show">
+                  <li><a class="navbar-brand" href="profile.html"><i class="fa fa-user fa-lg"></i></a></li>
+                </ul>
+    
+        </div>
+      </div>
+    </nav>
+    
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="container mt-4">  
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <h3>total</h3>
+    <table class="table table-bordered" style="text-align: center">
+      <thead >
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td>virat</td>
+          <td>kohli</td>
+          <td>virat@example.com</td>
+        </tr>
+        <tr>
+          <td>kaushik</td>
+          <td>ganguneni</td>
+          <td>kaush@mail.com</td>
+        </tr>
+        <tr>
+          <td>dhoni</td>
+          <td>msk</td>
+          <td>ms@greatstuff.com</td>
+        </tr>
+        <tr>
+          <td>rohit</td>
+          <td>sharma</td>
+          <td>hitman@test.com</td>
+        </tr>
+        <tr>
+          <td>kl</td>
+          <td>rahul</td>
+          <td>kl@test.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <br>
+      <tbody id="myTable">
+        <tr>
+          <td>virat</td>
+          <td>kohli</td>
+          <td>virat@example.com</td>
+        </tr>
+        <tr>
+          <td>kaushik</td>
+          <td>ganguneni</td>
+          <td>kaush@mail.com</td>
+        </tr>
+        <tr>
+          <td>dhoni</td>
+          <td>ms</td>
+          <td>ms@greatstuff.com</td>
+        </tr>
+        <tr>
+          <td>rohit</td>
+          <td>sharma</td>
+          <td>hitman@test.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td>virat</td>
+          <td>kohli</td>
+          <td>virat@example.com</td>
+        </tr>
+        <tr>
+          <td>kaushik</td>
+          <td>ganguneni</td>
+          <td>kaush@mail.com</td>
+        </tr>
+        <tr>
+          <td>dhoni</td>
+          <td>ms</td>
+          <td>ms@greatstuff.com</td>
+        </tr>
+        <tr>
+          <td>rohit</td>
+          <td>sharma</td>
+          <td>hitman@test.com</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
+
+</body>
+</html>
